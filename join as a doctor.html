@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Store</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/join as a doctor.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="photos/logo1.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link p-2 p-lg-3"
+                aria-current="page"
+                href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="about us .html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="store.html">Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="appointment.html"
+                >Appointment</a
+              >
+            </li>
+            <li class="nav-item dropdown p-2 p-lg-2">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                pages
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="our doctors.html"
+                    >Our Doctors</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="reviews.html">Reviews</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- join as a doctor -->
+    <div class="container doc_regester">
+      <h1 class="mb-5">Doctor Registration</h1>
+      <div id="errorAlert" class="alert alert-danger error-alert" role="alert">
+        <span class="close-btn">&times;</span>
+        <div class="error-message">
+          <!-- Error messages will appear here -->
+        </div>
+      </div>
+      <form id="doctorRegistrationForm">
+        <div class="row mb-3">
+          <label for="firstName" class="col-sm-2 col-form-label"
+            >First Name:</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              name="firstName"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="lastName" class="col-sm-2 col-form-label"
+            >Last Name:</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              name="lastName"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="phoneNumber" class="col-sm-2 col-form-label"
+            >Phone Number:</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="tel"
+              class="form-control"
+              id="phoneNumber"
+              name="phoneNumber"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="emailAddress" class="col-sm-2 col-form-label"
+            >Email Address:</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="email"
+              class="form-control"
+              id="emailAddress"
+              name="emailAddress"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="homeAddress" class="col-sm-2 col-form-label"
+            >Home Address:</label
+          >
+          <div class="col-sm-9">
+            <textarea
+              class="form-control"
+              id="homeAddress"
+              name="homeAddress"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="specialization" class="col-sm-2 col-form-label"
+            >Specialization:</label
+          >
+          <div class="col-sm-9">
+            <select
+              class="form-control"
+              id="specialization"
+              name="specialization"
+              required
+            >
+              <option value="" disabled selected>Select Specialization</option>
+              <option value="General Ophthalmologist">
+                Eye examination doctor
+              </option>
+
+              <option value="optical technician">optical technician</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="experience" class="col-sm-2 col-form-label"
+            >Experience:</label
+          >
+          <div class="col-sm-9">
+            <select
+              class="form-control"
+              id="experience"
+              name="experience"
+              required
+            >
+              <option value="" disabled selected>
+                Select Years of Experience
+              </option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="7">7 years</option>
+              <option value="8">8 years</option>
+              <option value="9">9 years</option>
+              <option value="10">10+ years</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="licenseNumber" class="col-sm-2 col-form-label"
+            >Medical License Number:</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              id="licenseNumber"
+              name="licenseNumber"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="photoUpload" class="col-sm-2 col-form-label"
+            >Upload Photo:</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="file"
+              class="form-control"
+              id="photoUpload"
+              name="photoUpload"
+              accept="image/*"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="password" class="col-sm-2 col-form-label"
+            >Password:</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              required
+            />
+            <small class="form-text password-terms">
+              Password must be at least 8 characters long, contain an uppercase
+              letter, a lowercase letter, a number, and a special character.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="confirmPassword" class="col-sm-2 col-form-label"
+            >Confirm Password:</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="password"
+              class="form-control"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn main-btn">Register</button>
+      </form>
+    </div>
+
+    <!-- Login form -->
+    <div
+      class="modal fade"
+      id="loginPopup"
+      tabindex="-1"
+      aria-labelledby="loginPopupLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="loginPopupLabel">Login</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="login_form">
+              <div class="mb-3">
+                <label for="log_username" class="form-label fw-bold"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="log_username"
+                  aria-describedby="usernameHelp"
+                  placeholder="Enter your username"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="log_password" class="form-label fw-bold"
+                  >Password
+                </label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="log_password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe"
+                  >Remember Me</label
+                >
+              </div>
+              <button type="submit" class="btn main-btn ms-0 mb-3">
+                Login
+              </button>
+              <a
+                href="#"
+                id="forgotPasswordLink"
+                data-bs-toggle="modal"
+                data-bs-target="#forgotPasswordPopup"
+                >Forgot Password?</a
+              >
+              <hr />
+              <p class="text-center fw-bold">OR</p>
+              <hr />
+              <div class="text-center log-option mb-3">
+                <a href="#" class="btn main-btn btn-sm me-2 ms-0">
+                  <i class="fab fa-facebook-f me-3"></i> Login with Facebook
+                </a>
+                <a href="#" class="btn btn-light btn-sm main-btn ms-0">
+                  <i class="fab fa-google me-3"></i> Login with Google
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- reset password -->
+    <div
+      class="modal fade"
+      id="forgotPasswordPopup"
+      tabindex="-1"
+      aria-labelledby="forgotPasswordPopupLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="forgotPasswordPopupLabel">
+              Forgot Password
+            </h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="forgotPasswordForm">
+              <div class="mb-3">
+                <label for="forgot_email" class="form-label fw-bold"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="forgot_email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn main-btn ms-0 mb-3">
+                <a
+                  href=""
+                  id="newPasswordPopuplink"
+                  data-bs-toggle="modal"
+                  data-bs-target="#newPasswordPopup"
+                  style="text-decoration: none; color: white"
+                  >Send Reset Link</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- link to inbox  -->
+    <div
+      class="modal fade"
+      id="newPasswordPopup"
+      tabindex="-1"
+      aria-labelledby="newPasswordPopupLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="newPasswordForm">
+              <label for="confirm_password" class="form-label fw-bold">
+                A password reset link has been sent to your email address.
+                Please check your inbox.
+                <div>
+                  <a
+                    href="https://mail.google.com/mail/u/0/#inbox"
+                    target="_blank"
+                  >
+                    go to your inbox
+                  </a>
+                </div>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="">
+        <div class="row">
+          <div class="col ms-5">
+            <img
+              src="photos/white logo.png"
+              alt="Company Logo"
+              class="img-fluid mb-3"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              nulla sapien, aliquam euismod magna vel, egestas faucibus quam.
+            </p>
+            <div class="d-flex justify-content-center icons">
+              <a href="#"><i class="fa-brands fa-facebook me-4 fs-1"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter me-4 fs-1"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in me-4 fs-1"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram me-4 fs-1"></i></a>
+            </div>
+          </div>
+          <div class="col text-center">
+            <h4>Menu Items</h4>
+            <hr />
+            <ul style="list-style: none">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about us .html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="store.html">Store</a></li>
+              <li><a href="appointment.html">Appointment</a></li>
+            </ul>
+          </div>
+          <div class="col text-center column-gap-2">
+            <h4>Support Links</h4>
+            <hr />
+            <ul style="list-style: none">
+              <li><a href="our doctors.html">Our Doctors</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="join as a doctor.html">Join As A Doctor </a></li>
+            </ul>
+          </div>
+          <div class="col text-center">
+            <h4>Contact Us</h4>
+            <hr />
+            <p>
+              123 Main Street<br />Anytown, CA 12345<br />555-555-5555<br />info@company.com
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="copyright text-center mt-3">
+            <p>&copy; 2024 Lenslook. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/join as a doctor.js"></script>
+  </body>
+</html>

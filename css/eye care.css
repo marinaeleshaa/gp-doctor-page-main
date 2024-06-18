@@ -1,0 +1,50 @@
+:root {
+  --myblue: #033373;
+  --mylight: #17b8da;
+  --mywhite: white;
+  --mylightblue: #03347310;
+  --mydoctorblue: #03347377;
+  --transition: 0.3s ease-in-out;
+  --bottom_up: bottomUp 2s ease-in-out forwards;
+  --left_right: left_right 2s ease-in-out forwards;
+  --my_shadow: 0px 0px 15px -5px var(--myblue);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.serv_parent {
+  margin-top: 150px;
+  margin-bottom: 200px;
+  color: var(--myblue);
+}
+
+.serv_parent > h3 {
+  color: var(--mylight);
+  animation: var(--left_right);
+}
+
+.eye-container1 {
+  margin-top: -100px !important;
+  color: var(--myblue);
+  max-width: 900px;
+}
+
+.accordion-body {
+  color: var(--myblue);
+}
+
+.eye-container2 {
+  color: var(--myblue);
+  max-width: 900px;
+}
+
+hr {
+  max-width: 1100px;
+  margin: 50px auto;
+  color: var(--myblue);
+  box-shadow: var(--my_shadow);
+}

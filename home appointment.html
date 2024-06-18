@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/home appointment.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="photos/logo1.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link p-2 p-lg-3"
+                aria-current="page"
+                href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="about us .html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="store.html">Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="appointment.html"
+                >Appointment</a
+              >
+            </li>
+            <li class="nav-item dropdown p-2 p-lg-2">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                pages
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="our doctors.html"
+                    >Our Doctors</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="reviews.html">Reviews</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="mb-5">In-Home Doctor Appointment</h1>
+      <div id="errorAlert" class="alert alert-danger error-alert" role="alert">
+        <span class="close-btn">&times;</span>
+        <div class="error-message">
+          <!-- Error messages will appear here -->
+        </div>
+      </div>
+      <form id="appointmentFormHome">
+        <div class="row mb-3">
+          <label for="name" class="col-sm-2 col-form-label">Full Name:</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="phone" class="col-sm-2 col-form-label"
+            >Phone Number:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="email" class="col-sm-2 col-form-label"
+            >Email Address:</label
+          >
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="address" class="col-sm-2 col-form-label"
+            >Home Address:</label
+          >
+          <div class="col-sm-10">
+            <textarea
+              class="form-control"
+              id="address"
+              name="address"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="date" class="col-sm-2 col-form-label"
+            >Preferred Date:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="date"
+              class="form-control"
+              id="date"
+              name="date"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="time" class="col-sm-2 col-form-label"
+            >Preferred Time (optional):</label
+          >
+          <div class="col-sm-10">
+            <input type="time" class="form-control" id="time" name="time" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="reason" class="col-sm-2 col-form-label"
+            >Reason for Visit:</label
+          >
+          <div class="col-sm-10">
+            <textarea
+              class="form-control"
+              id="reason"
+              name="reason"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn main-btn">
+          Submit Appointment Request
+        </button>
+      </form>
+      <div id="alert-success" class="overlay-alert d-none">
+        <div class="alert alert-success alert-content" role="alert">
+          <span class="close-btn">&times;</span>
+          Form submitted successfully!
+          <div><i class="fa-regular fa-face-laugh-wink fs-2"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="">
+        <div class="row">
+          <div class="col ms-5">
+            <img
+              src="photos/white logo.png"
+              alt="Company Logo"
+              class="img-fluid mb-3"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              nulla sapien, aliquam euismod magna vel, egestas faucibus quam.
+            </p>
+            <div class="d-flex justify-content-center icons">
+              <a href="#"><i class="fa-brands fa-facebook me-4 fs-1"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter me-4 fs-1"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in me-4 fs-1"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram me-4 fs-1"></i></a>
+            </div>
+          </div>
+          <div class="col text-center">
+            <h4>Menu Items</h4>
+            <hr />
+            <ul style="list-style: none">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about us .html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="store.html">Store</a></li>
+              <li><a href="appointment.html">Appointment</a></li>
+            </ul>
+          </div>
+          <div class="col text-center column-gap-2">
+            <h4>Support Links</h4>
+            <hr />
+            <ul style="list-style: none">
+              <li><a href="our doctors.html">Our Doctors</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="join as a doctor.html">Join As A Doctor </a></li>
+            </ul>
+          </div>
+          <div class="col text-center">
+            <h4>Contact Us</h4>
+            <hr />
+            <p>
+              123 Main Street<br />Anytown, CA 12345<br />555-555-5555<br />info@company.com
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="copyright text-center mt-3">
+            <p>&copy; 2024 Lenslook. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/home appointment.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
